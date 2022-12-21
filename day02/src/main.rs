@@ -1,6 +1,9 @@
 use common_utils;
 
 fn score_from_str(s: &str) -> i32 {
+    /// part 1 score resolver. We compare the two players and record the score.
+    /// Could be more elegant using a match, but the if...else pattern makes 
+    /// the logic explicit.
     let v: Vec<char> = s.chars().collect();
     let p1:Throw = v[0].try_into().unwrap();
     let p2:Throw = v[2].try_into().unwrap();
@@ -42,6 +45,7 @@ fn score_from_str(s: &str) -> i32 {
 }
 
 fn score_from_str_flipped(s: &str) -> i32 {
+    /// part 2 score resolver. 
     let v: Vec<char> = s.chars().collect();
     let p1:Throw = v[0].try_into().unwrap();
     let p2:Outcome = v[2].try_into().unwrap();
